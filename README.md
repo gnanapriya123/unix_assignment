@@ -36,7 +36,7 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 
 ## Project Structure <br>
  attendance-app/
-- │
+ │<br>
 - ├── backend/ # Backend server (Node.js)
 - │ ├── server.js
 - │ ├── package.json
