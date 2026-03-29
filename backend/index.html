@@ -71,112 +71,90 @@
 </style>
 <div class="container">
     <h2>Student Attendance</h2>
-
     <input id="name" type="text" placeholder="Enter Name" />
-
     <select id="status">
         <option value="Present">Present</option>
         <option value="Absent">Absent</option>
     </select>
-
     <button class="add-btn" onclick="markAttendance()">Add Attendance</button>
-
     <h3>Records</h3>
     <ul id="list"></ul>
 </div>
 
 <script>
-    // ADD ATTENDANCE
-    async function markAttendance() {
-        const name = document.getElementById("name").value.trim();
-        const status = document.getElementById("status").value;
+    async function markAttendance(){
+        const name=document.getElementById("name").value.trim();
+        const status=document.getElementById("status").value;
 
-        if (name === "") {
+        if(name===""){
             alert("Please enter student name!");
             return;
         }
-
-        try {
-            const response = await fetch("/mark", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
+        try{
+            const response=await fetch("/mark",{
+                method:"POST",
+                headers:{
+                    "Content-Type":"application/json"
                 },
-                body: JSON.stringify({
-                    name: name,
-                    status: status,
-                    date: new Date()
+                body:JSON.stringify({
+                    name:name,
+                    status:status,
+                    date:new Date()
                 })
             });
 
-            if (!response.ok) {
+            if(!response.ok){
                 throw new Error("Failed to add attendance");
             }
-
-            document.getElementById("name").value = "";
+            document.getElementById("name").value="";
             loadData();
-
-        } catch (error) {
+        }catch(error){
             console.error(error);
             alert("Error adding attendance");
         }
     }
-
-    // DELETE ATTENDANCE
-    async function deleteRecord(id) {
-        if (!confirm("Are you sure you want to delete?")) return;
-
-        try {
-            const response = await fetch("/delete/" + id, {
+   
+    async function deleteRecord(id){
+        if(!confirm("Are you sure you want to delete?")) return;
+        try{
+            const response=await fetch("/delete/" + id, {
                 method: "DELETE"
             });
 
-            if (!response.ok) {
+            if(!response.ok){
                 throw new Error("Delete failed");
             }
-
             loadData();
-
-        } catch (error) {
+        }catch(error){
             console.error(error);
             alert("Error deleting record");
         }
     }
 
-    // LOAD DATA
-    async function loadData() {
-        try {
-            const response = await fetch("/all");
-
-            if (!response.ok) {
+    async function loadData(){
+        try{
+            const response=await fetch("/all");
+            if(!response.ok){
                 throw new Error("Failed to fetch data");
             }
-
-            const data = await response.json();
-
-            const list = document.getElementById("list");
-            list.innerHTML = "";
-
-            data.forEach(item => {
-                const li = document.createElement("li");
-
-                li.innerHTML = `
+            const data=await response.json();
+            const list=document.getElementById("list");
+            list.innerHTML="";
+            data.forEach(item=>{
+                const li=document.createElement("li");
+                li.innerHTML=`
                     <span class="record-text">
-                        ${item.name} - ${item.status}
+                        ${item.name}-${item.status}
                     </span>
                     <button class="delete-btn" onclick="deleteRecord('${item._id}')">Delete</button>
                 `;
-
                 list.appendChild(li);
             });
-
-        } catch (error) {
+        }catch(error){
             console.error(error);
             alert("Error loading data");
         }
     }
-
-    // INITIAL LOAD
     loadData();
 </script>
 </body>
