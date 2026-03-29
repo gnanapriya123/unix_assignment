@@ -1,6 +1,9 @@
 Attendance App
+
 A full-stack Attendance Management Application with a Node.js backend, frontend UI, and MongoDB database, containerized using Docker and deployable via Kubernetes.
+
 ATTENDANCE-APP/
+
 │
 ├── backend/                # Node.js backend server
 │   ├── Dockerfile
