@@ -55,10 +55,6 @@ This is a full-stack **Student Attendance Application** used to mark and track s
  ├── docker-compose.yml<br>
  └── README.md<br>
 
-
----
-
-
 ---
 
 ## Docker Setup
