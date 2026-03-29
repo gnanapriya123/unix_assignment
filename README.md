@@ -35,25 +35,25 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 ---
 
 ## Project Structure
-attendance-app/
-│
-├── backend/ # Backend server (Node.js)
-│ ├── server.js
-│ ├── package.json
-│ ├── Dockerfile
-│ └── index.html
-│
-├── frontend/ # Frontend UI
-│ └── index.html
-│
-├── k8s/ # Kubernetes configuration files
-│ ├── backend-deployment.yaml
-│ ├── backend-service.yaml
-│ ├── mongo-deployment.yaml
-│ └── mongo-service.yaml
-│
-├── docker-compose.yml
-└── README.md
+- attendance-app/
+- │
+- ├── backend/ # Backend server (Node.js)
+- │ ├── server.js
+- │ ├── package.json
+- │ ├── Dockerfile
+- │ └── index.html
+- │
+- ├── frontend/ # Frontend UI
+- │ └── index.html
+- │
+- ├── k8s/ # Kubernetes configuration files
+- │ ├── backend-deployment.yaml
+- │ ├── backend-service.yaml
+- │ ├── mongo-deployment.yaml
+- │ └── mongo-service.yaml
+- │
+- ├── docker-compose.yml
+- └── README.md
 
 
 ---
