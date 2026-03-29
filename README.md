@@ -63,13 +63,8 @@ attendance-app/
 
 ## Docker Setup
 
-### Build Docker Image
-
-```bash
-docker build -t attendance-app .
-
-**## Run Containers**
-docker-compose up
+Build Docker Image: docker build -t attendance-app .
+Run Containers: docker-compose up
 
 ## Kubernetes Setup
 Start Minikube:minikube start
