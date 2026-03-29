@@ -62,10 +62,14 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 - **Build Docker Image:** docker build -t attendance-app .
 - **Run Containers:** docker-compose up
 
+---
+
 ## Kubernetes Setup
 - **Start Minikube:** minikube start
 - **Check Running Pods:** kubectl get pods
 - **Access Application:** minikube service backend-service
+
+---
 
 ## Learning Outcomes
 - Docker containerization
