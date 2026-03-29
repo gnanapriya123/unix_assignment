@@ -63,17 +63,17 @@ attendance-app/
 
 ## Docker Setup
 
-Build Docker Image: docker build -t attendance-app .
-Run Containers: docker-compose up
+- **Build Docker Image:** docker build -t attendance-app .
+- **Run Containers:** docker-compose up
 
 ## Kubernetes Setup
-Start Minikube:minikube start
-Check Running Pods:kubectl get pods
-Access Application:minikube service backend-service
+- **Start Minikube:** minikube start
+- **Check Running Pods:** kubectl get pods
+- **Access Application:** minikube service backend-service
 
 ## Learning Outcomes
-Docker containerization
-Kubernetes deployment
-Backend + frontend integration
-Working with MongoDB
-Debugging container networking
+- Docker containerization
+- Kubernetes deployment
+- Backend + frontend integration
+- Working with MongoDB
+- Debugging container networking
