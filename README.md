@@ -71,12 +71,12 @@ docker build -t attendance-app .
 **## Run Containers**
 docker-compose up
 
-Kubernetes Setup
+## Kubernetes Setup
 Start Minikube:minikube start
 Check Running Pods:kubectl get pods
 Access Application:minikube service backend-service
 
-Learning Outcomes
+## Learning Outcomes
 Docker containerization
 Kubernetes deployment
 Backend + frontend integration
