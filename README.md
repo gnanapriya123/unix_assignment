@@ -1,6 +1,6 @@
 # Student Attendance App (Docker + Kubernetes)
 
----
+
 
 ## Project Overview
 
