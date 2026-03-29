@@ -1,9 +1,8 @@
-Attendance App
+**##Attendance App**
 
 A full-stack Attendance Management Application with a Node.js backend, frontend UI, and MongoDB database, containerized using Docker and deployable via Kubernetes.
 
-ATTENDANCE-APP/
-
+**##ATTENDANCE-APP/**
 │
 ├── backend/                # Node.js backend server
 │   ├── Dockerfile
@@ -30,7 +29,7 @@ ATTENDANCE-APP/
 
 ---
 
-## 🚀 Features
+## Features
 
 - Backend API using **Node.js & Express**
 - MongoDB database integration
@@ -40,7 +39,7 @@ ATTENDANCE-APP/
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 Make sure you have installed:
 
@@ -51,7 +50,7 @@ Make sure you have installed:
 
 ---
 
-## 🧪 Running Locally (Without Docker)
+## Running Locally (Without Docker)
 
 ### 1. Install Dependencies
 
