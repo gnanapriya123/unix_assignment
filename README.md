@@ -1,69 +1,92 @@
-**##Attendance App**
+# 📊 Student Attendance App (Docker + Kubernetes)
 
-A full-stack Attendance Management Application with a Node.js backend, frontend UI, and MongoDB database, containerized using Docker and deployable via Kubernetes.
+---
 
-**##ATTENDANCE-APP/**
+## 📌 Project Overview
+
+This is a full-stack **Student Attendance Application** used to mark and track student attendance.
+
+- **Backend:** Node.js + Express  
+- **Database:** MongoDB  
+- **Containerization:** Docker  
+- **Deployment:** Kubernetes (Minikube)  
+- **Frontend:** HTML, CSS, JavaScript  
+
+---
+
+## 🧠 Tech Stack
+
+- **Frontend:** HTML, CSS, JavaScript  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **DevOps:** Docker, Kubernetes  
+
+---
+
+## 🚀 Features
+
+- Mark student attendance  
+- View attendance records  
+- Store data in MongoDB  
+- Simple frontend interface  
+- Fully Dockerized  
+- Kubernetes deployment support  
+
+---
+
+## 📁 Project Structure
+attendance-app/
 │
-├── backend/                # Node.js backend server
-│   ├── Dockerfile
-│   ├── server.js
-│   ├── package.json
-│   └── index.html
+├── backend/ # Backend server (Node.js)
+│ ├── server.js
+│ ├── package.json
+│ ├── Dockerfile
+│ └── index.html
 │
-├── frontend/               # Frontend UI
-│   └── index.html
+├── frontend/ # Frontend UI
+│ └── index.html
 │
-├── node_modules/
-├── .gitignore
+├── k8s/ # Kubernetes configuration files
+│ ├── backend-deployment.yaml
+│ ├── backend-service.yaml
+│ ├── mongo-deployment.yaml
+│ └── mongo-service.yaml
 │
-├── docker-compose.yml      # Docker setup
-│
-├── Kubernetes Files:
-│   ├── backend-deployment.yaml
-│   ├── backend-service.yaml
-│   ├── mongo-deployment.yaml
-│   └── mongo-service.yaml
-│
-└── package-lock.json
+├── docker-compose.yml
+└── README.md
 
 
 ---
 
-## Features
-
-- Backend API using **Node.js & Express**
-- MongoDB database integration
-- Simple frontend UI
-- Dockerized services
-- Kubernetes deployment support
 
 ---
 
-## Prerequisites
+## 🐳 Docker Setup
 
-Make sure you have installed:
-
-- Node.js
-- Docker
-- Docker Compose
-- Kubernetes (kubectl + cluster like Minikube)
-
----
-
-## Running Locally (Without Docker)
-
-### 1. Install Dependencies
+### Build Docker Image
 
 ```bash
-cd backend
-npm install
+docker build -t attendance-app .
 
-node server.js
+**## Run Containers**
+docker-compose up
 
-frontend/index.html
+Kubernetes Setup
+Start Minikube:minikube start
+Check Running Pods:kubectl get pods
+Access Application:minikube service backend-service
 
-docker-compose up --build
-Backend → http://localhost:5000
-MongoDB → Port 27017
+📚 Learning Outcomes
+Docker containerization
+Kubernetes deployment
+Backend + frontend integration
+Working with MongoDB
+Debugging container networking
 
+👤 Author
 
+Gnana Priya
+
+📄 License
+
+This project is for educational purposes.
