@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance</title>
+</head>
+<body>
+    <h2>Student Attendance</h2>
+
+    <input id="name" placeholder="Student Name">
+    <select id="status">
+        <option>Present</option>
+        <option>Absent</option>
+    </select>
+    <button onclick="markAttendance()">Submit</button>
+
+    <h3>Records</h3>
+    <ul id="list"></ul>
+
+<script>
+const API = "http://localhost:5000";
+
+async function markAttendance() {
+    const name = document.getElementById("name").value;
+    const status = document.getElementById("status").value;
+
+    await fetch(API + "/mark", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            name,
+            status,
+            date: new Date().toLocaleDateString()
+        })
+    });
+
+    loadData();
+}
+
+async function loadData() {
+    const res = await fetch(API + "/all");
+    const data = await res.json();
+
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    data.forEach(d => {
+        list.innerHTML += `<li>${d.name} - ${d.status} (${d.date})</li>`;
+    });
+}
+
+loadData();
+</script>
+</body>
+</html>
