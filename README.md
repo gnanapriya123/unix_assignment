@@ -1,8 +1,8 @@
-# 📊 Student Attendance App (Docker + Kubernetes)
+# Student Attendance App (Docker + Kubernetes)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This is a full-stack **Student Attendance Application** used to mark and track student attendance.
 
@@ -14,7 +14,7 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 
 ---
 
-## 🧠 Tech Stack
+## Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Node.js, Express.js  
@@ -23,7 +23,7 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 
 ---
 
-## 🚀 Features
+## Features
 
 - Mark student attendance  
 - View attendance records  
@@ -34,7 +34,7 @@ This is a full-stack **Student Attendance Application** used to mark and track s
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 attendance-app/
 │
 ├── backend/ # Backend server (Node.js)
@@ -61,7 +61,7 @@ attendance-app/
 
 ---
 
-## 🐳 Docker Setup
+## Docker Setup
 
 ### Build Docker Image
 
@@ -76,17 +76,9 @@ Start Minikube:minikube start
 Check Running Pods:kubectl get pods
 Access Application:minikube service backend-service
 
-📚 Learning Outcomes
+Learning Outcomes
 Docker containerization
 Kubernetes deployment
 Backend + frontend integration
 Working with MongoDB
 Debugging container networking
-
-👤 Author
-
-Gnana Priya
-
-📄 License
-
-This project is for educational purposes.
